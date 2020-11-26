@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o
-LINKOBJ  = main.o
+OBJ      = main.o input.o board_check.o eight_check.o print.o end.o
+LINKOBJ  = main.o input.o board_check.o eight_check.o print.o end.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -26,3 +26,18 @@ $(BIN): $(OBJ)
 
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
+
+input.o: input.c
+	$(CC) -c input.c -o input.o $(CFLAGS)
+
+board_check.o: board_check.c
+	$(CC) -c board_check.c -o board_check.o $(CFLAGS)
+
+eight_check.o: eight_check.c
+	$(CC) -c eight_check.c -o eight_check.o $(CFLAGS)
+
+print.o: print.c
+	$(CC) -c print.c -o print.o $(CFLAGS)
+
+end.o: end.c
+	$(CC) -c end.c -o end.o $(CFLAGS)
